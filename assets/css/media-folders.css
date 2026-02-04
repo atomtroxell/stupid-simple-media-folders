@@ -1,0 +1,837 @@
+/**
+ * Media Library Folders CSS
+ * Collapsible dropdown style
+ */
+
+/* Dropdown wrapper */
+.compat-field-folders .folders-dropdown-wrapper {
+	margin-top: 4px;
+}
+
+/* Toggle button - styled like WP select field */
+.compat-field-folders .folders-dropdown-toggle {
+	width: 100%;
+	min-height: 30px;
+	padding: 3px 24px 3px 8px;
+	background: #fff;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: left;
+	font-size: 13px;
+	line-height: 2;
+	color: #2c3338;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.compat-field-folders .folders-dropdown-toggle:hover {
+	border-color: #2271b1;
+}
+
+.compat-field-folders .folders-dropdown-toggle:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: 2px solid transparent;
+}
+
+/* Arrow indicator */
+.compat-field-folders .folders-dropdown-arrow {
+	font-size: 10px;
+	color: #8c8f94;
+	transition: transform 0.2s;
+}
+
+.compat-field-folders .folders-dropdown-toggle[aria-expanded="true"] .folders-dropdown-arrow {
+	transform: rotate(180deg);
+}
+
+/* Dropdown panel */
+.compat-field-folders .folders-dropdown-panel {
+	display: none;
+	margin-top: 4px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.compat-field-folders .folders-dropdown-panel.is-open {
+	display: block;
+}
+
+/* Checkbox list */
+.compat-field-folders .categorychecklist {
+	list-style: none;
+	margin: 0;
+	padding: 8px;
+}
+
+.compat-field-folders .categorychecklist li {
+	margin: 0;
+	padding: 4px 6px;
+	line-height: 20px;
+	border-radius: 3px;
+	transition: background-color 0.1s ease;
+}
+
+.compat-field-folders .categorychecklist li:hover {
+	background-color: #f6f7f7;
+}
+
+.compat-field-folders .categorychecklist .children {
+	margin-left: 18px;
+	padding: 0;
+}
+
+.compat-field-folders .categorychecklist label {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.compat-field-folders .categorychecklist input[type=checkbox] {
+	margin: 0 6px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.compat-field-folders .categorychecklist input[type=checkbox]:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+/* Folder dropdown on upload page */
+#folder_id {
+	max-width: 300px;
+	margin-bottom: 15px;
+}
+
+/* Grid view filter dropdown */
+#ssmf-grid-taxonomy-filter {
+	max-width: 200px;
+}
+
+/* List view filter dropdown */
+.tablenav .actions select[name="folders"] {
+	float: none;
+}
+
+/* Folders taxonomy admin page styling - File Manager Layout */
+
+/* Reorganize layout - make add form full width on top */
+.taxonomy-folders #col-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.taxonomy-folders #col-left {
+	display: none;
+	width: 100%;
+	max-width: none;
+	float: none;
+	margin-bottom: 10px;
+}
+
+.taxonomy-folders #col-right {
+	width: 100%;
+	float: none;
+}
+
+/* Add form styling - compact inline form */
+.taxonomy-folders .form-wrap {
+	background: #f6f7f7;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 12px 16px;
+	box-shadow: none;
+}
+
+.taxonomy-folders #col-left h2 {
+	display: none;
+}
+
+.taxonomy-folders .form-field input[type="text"],
+.taxonomy-folders .form-field textarea {
+	border-radius: 4px;
+	border-color: #8c8f94;
+}
+
+.taxonomy-folders .form-field input[type="text"]:focus,
+.taxonomy-folders .form-field textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+.taxonomy-folders .form-field label {
+	font-weight: 500;
+	color: #1d2327;
+	font-size: 13px;
+	display: block;
+	margin-bottom: 3px;
+}
+
+.taxonomy-folders .form-field {
+	margin-bottom: 10px;
+}
+
+.taxonomy-folders .form-field p {
+	margin: 2px 0;
+	font-size: 12px;
+	color: #646970;
+}
+
+/* Make name field more prominent */
+.taxonomy-folders .form-field input#tag-name {
+	font-size: 14px;
+}
+
+/* Hide slug field completely - auto-generated from folder name */
+.taxonomy-folders .form-field.term-slug-wrap {
+	display: none;
+}
+
+/* Hide slug field in quick edit as well */
+.taxonomy-folders .inline-edit-row .inline-edit-col label.inline-edit-tags:has(input[name="slug"]),
+.taxonomy-folders .inline-edit-row label.inline-edit-tags:has(input[name="slug"]) {
+	display: none;
+}
+
+/* Make description field smaller */
+.taxonomy-folders .form-field textarea {
+	min-height: 60px;
+	font-size: 13px;
+}
+
+/* Expand/Collapse controls */
+.folder-hierarchy-controls {
+	margin-left: 16px;
+	display: inline-block;
+}
+
+.folder-hierarchy-controls .button {
+	margin-left: 8px;
+	font-size: 13px;
+	height: 30px;
+	line-height: 28px;
+	padding: 0 12px;
+}
+
+/* Table styling - File Manager Layout */
+.taxonomy-folders .wp-list-table {
+	border: 1px solid #c3c4c7;
+	border-radius: 0;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	background: #fff;
+}
+
+.taxonomy-folders .wp-list-table th {
+	background: #f6f7f7 !important;
+	font-weight: 600;
+	border-bottom: 1px solid #c3c4c7;
+	padding: 10px 12px;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 0.5px;
+	color: #50575e;
+}
+
+/* Remove alternating row colors for cleaner file manager look */
+.taxonomy-folders .wp-list-table tbody tr {
+	background: #fff;
+	border-bottom: 1px solid #f0f0f1;
+	transition: background-color 0.1s ease;
+}
+
+.taxonomy-folders .wp-list-table tbody tr.alternate,
+.taxonomy-folders .wp-list-table tbody tr:nth-child(odd) {
+	background: #fff;
+}
+
+.taxonomy-folders .wp-list-table tbody tr:hover,
+.taxonomy-folders .wp-list-table tbody tr:hover th.check-column,
+.taxonomy-folders .wp-list-table tbody tr:hover td {
+	background: #f6f7f7 !important;
+}
+
+.taxonomy-folders .wp-list-table td {
+	padding: 14px 12px;
+	border-bottom: 1px solid #f0f0f1;
+	vertical-align: middle;
+}
+
+/* Child rows - initially hidden */
+.taxonomy-folders .wp-list-table tbody tr.is-child {
+	display: none;
+}
+
+/* Expanded state */
+.taxonomy-folders .wp-list-table tbody tr.is-expanded {
+	background: #f9f9f9;
+}
+
+/* Table header area */
+.taxonomy-folders .tablenav {
+	margin-top: 8px;
+	padding: 8px 0;
+}
+
+.taxonomy-folders .search-form {
+	margin: 0;
+}
+
+/* Reduce page title area spacing */
+.taxonomy-folders .wrap h1 {
+	margin-bottom: 12px;
+}
+
+/* Submit button styling */
+.taxonomy-folders .submit {
+	padding-top: 4px;
+	margin-bottom: 0;
+}
+
+.taxonomy-folders .submit input[type="submit"] {
+	background: #2271b1;
+	border-color: #2271b1;
+	color: #fff;
+	padding: 5px 12px;
+	border-radius: 3px;
+	font-weight: 500;
+	font-size: 13px;
+	height: 28px;
+	line-height: 1;
+	transition: all 0.15s ease;
+}
+
+.taxonomy-folders .submit input[type="submit"]:hover {
+	background: #135e96;
+	border-color: #135e96;
+}
+
+/* Add visual label to form when visible */
+.taxonomy-folders #col-left:not([style*="display: none"]) .form-wrap::before,
+.taxonomy-folders #col-left[style*="display: block"] .form-wrap::before {
+	content: "Add New Folder";
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	color: #1d2327;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+/* Add Folder button styling */
+#show-add-folder-form {
+	vertical-align: baseline;
+}
+
+/* Hide WordPress admin notices on folders page for cleaner layout */
+.taxonomy-folders .notice {
+	display: none;
+}
+
+/* Folder name column - File Manager Style */
+.taxonomy-folders .column-name {
+	width: 45%;
+	font-weight: 500;
+	position: relative;
+}
+
+/* Folder icon - button element for accessibility */
+.taxonomy-folders .ssmf-folder-icon {
+	/* Reset button styles */
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	outline: none;
+
+	/* Icon styles */
+	display: inline-block;
+	margin-right: 8px;
+	margin-top: -6px;
+	vertical-align: middle;
+	width: 16px;
+	height: 12px;
+	min-width: 16px; /* Prevent button from shrinking */
+	background-image: url('../images/icon-folder.svg');
+	background-size: 32px 24px;
+	background-repeat: no-repeat;
+	background-position: 0 0; /* Default: closed folder (static) */
+	flex-shrink: 0;
+	transition: background-position 0.15s ease;
+}
+
+/* Folders with children - closed state icon */
+.taxonomy-folders .ssmf-folder-icon.has-children {
+	cursor: pointer;
+	background-position: 0 0; /* Closed folder */
+}
+
+/* Folders with children - expanded state icon */
+.taxonomy-folders .ssmf-folder-icon.has-children.is-open {
+	background-position: -16px 0; /* Open folder */
+}
+
+/* Hover states for folder icons with children */
+.taxonomy-folders .ssmf-folder-icon.has-children:hover {
+	background-position: 0 -12px; /* Closed folder hover */
+}
+
+.taxonomy-folders .ssmf-folder-icon.has-children.is-open:hover {
+	background-position: -16px -12px; /* Open folder hover */
+}
+
+/* Focus state for keyboard navigation - WCAG 2.2 AA compliant */
+.taxonomy-folders .ssmf-folder-icon:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+	border-radius: 3px;
+	box-shadow: 0 0 0 2px rgba(34, 113, 177, 0.1);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.taxonomy-folders .ssmf-folder-icon:focus {
+		outline-width: 3px;
+		outline-offset: 3px;
+	}
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	.taxonomy-folders .ssmf-folder-icon {
+		transition: none;
+	}
+}
+
+/* Disabled state for folders without children */
+.taxonomy-folders .ssmf-folder-icon:not(.has-children) {
+	opacity: 0.7;
+	cursor: default;
+}
+
+.taxonomy-folders .ssmf-folder-icon:not(.has-children):hover {
+	background-position: 0 0; /* Keep same position, no hover effect */
+}
+
+/* Folder name - no longer a link, used for expand/collapse */
+.taxonomy-folders .row-title {
+	font-size: 14px;
+	color: #1d1f25;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: default;
+	user-select: none;
+}
+
+/* Folders with children - clickable title for expand/collapse */
+.taxonomy-folders tr.has-children .row-title {
+	color: #2271b1;
+	cursor: pointer;
+}
+
+.taxonomy-folders tr.has-children .row-title:hover {
+	color: #135e96;
+}
+
+/* Folders without children - plain text */
+.taxonomy-folders tr:not(.has-children) .row-title {
+	color: #646970;
+	cursor: default;
+}
+
+/* Folder description info icon */
+.taxonomy-folders .ssmf-folder-description-icon {
+	display: inline-block;
+	margin-left: 6px;
+	color: #787c82;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	cursor: help;
+	vertical-align: middle;
+	position: relative;
+	transition: color 0.15s ease-in-out;
+}
+
+.taxonomy-folders .ssmf-folder-description-icon:hover {
+	color: #2271b1;
+}
+
+/* Tooltip styling - WordPress native style */
+.taxonomy-folders .ssmf-folder-description-icon::after {
+	content: attr(aria-label);
+	position: absolute;
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
+	background: #1d2327;
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-size: 13px;
+	line-height: 1.4;
+	white-space: normal;
+	max-width: 280px;
+	width: max-content;
+	min-width: 180px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+	pointer-events: none;
+	z-index: 999999;
+	font-weight: 400;
+	text-align: left;
+}
+
+/* Tooltip arrow */
+.taxonomy-folders .ssmf-folder-description-icon::before {
+	content: '';
+	position: absolute;
+	bottom: calc(100% + 2px);
+	left: 50%;
+	transform: translateX(-50%);
+	border: 6px solid transparent;
+	border-top-color: #1d2327;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+	z-index: 999999;
+}
+
+/* Show tooltip on hover */
+.taxonomy-folders .ssmf-folder-description-icon:hover::after,
+.taxonomy-folders .ssmf-folder-description-icon:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* All folder titles now link to media library - remove special handling */
+/* Folders without children have static icon, but title is still a link */
+
+/* Hierarchy indentation */
+.taxonomy-folders tr[data-depth="1"] .column-name {
+	padding-left: 32px;
+	position: relative;
+}
+
+.taxonomy-folders tr[data-depth="2"] .column-name {
+	padding-left: 52px;
+	position: relative;
+}
+
+.taxonomy-folders tr[data-depth="3"] .column-name {
+	padding-left: 72px;
+	position: relative;
+}
+
+.taxonomy-folders tr[data-depth="4"] .column-name {
+	padding-left: 92px;
+	position: relative;
+}
+
+/* Hierarchy connecting lines */
+.taxonomy-folders tr.is-child .column-name::before {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: -34px;
+	bottom: calc(50% + 9px);
+	width: 1px;
+	background: #dcdcde;
+}
+
+.taxonomy-folders tr[data-depth="1"] .column-name::before {
+	left: 14px;
+}
+
+.taxonomy-folders tr[data-depth="2"] .column-name::before {
+	left: 40px;
+}
+
+.taxonomy-folders tr[data-depth="3"] .column-name::before {
+	left: 60px;
+}
+
+.taxonomy-folders tr[data-depth="4"] .column-name::before {
+	left: 80px;
+}
+
+/* Horizontal line to folder */
+.taxonomy-folders tr.is-child .column-name::after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: calc(50% - 10px);
+	width: 12px;
+	height: 1px;
+	background: #dcdcde;
+}
+
+.taxonomy-folders tr[data-depth="1"] .column-name::after {
+	left: 15px;
+}
+
+.taxonomy-folders tr[data-depth="2"] .column-name::after {
+	left: 40px;
+}
+
+.taxonomy-folders tr[data-depth="3"] .column-name::after {
+	left: 60px;
+}
+
+.taxonomy-folders tr[data-depth="4"] .column-name::after {
+	left: 80px;
+}
+
+/* Items count column */
+.taxonomy-folders .column-posts {
+	font-weight: 500;
+	color: #646970;
+}
+
+/* Subfolders count column */
+.taxonomy-folders th.column-subfolders {
+	text-align: center !important;
+}
+
+.taxonomy-folders .column-subfolders {
+	font-weight: 500;
+	color: #646970;
+	text-align: center !important;
+}
+
+/* File types column - badge style */
+.taxonomy-folders .column-file_types {
+	font-size: 12px;
+	color: #646970;
+}
+
+/* Description column */
+.taxonomy-folders .column-description {
+	color: #787c82;
+	font-size: 13px;
+	font-style: italic;
+}
+
+/* Row actions - Always visible and indented to align with title */
+.taxonomy-folders .row-actions {
+	position: static !important;
+	left: auto !important;
+	color: #646970;
+	margin-left: 24px;
+}
+
+.taxonomy-folders tr .row-actions {
+	position: static !important;
+	left: auto !important;
+}
+
+
+.taxonomy-folders .row-actions span {
+	display: inline;
+}
+
+.taxonomy-folders .row-actions a {
+	color: #2271b1;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.taxonomy-folders .row-actions a:hover {
+	color: #135e96;
+}
+
+.taxonomy-folders .row-actions .button-link {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	color: #2271b1;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: 400;
+}
+
+.taxonomy-folders .row-actions .button-link:hover {
+	color: #135e96;
+}
+
+.taxonomy-folders .row-actions .button-link:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 1px;
+}
+
+.taxonomy-folders .row-actions .submitdelete:hover {
+	color: #d63638;
+}
+
+/* Media library search form - hide label, use placeholder instead */
+.media-toolbar-primary .media-search-input-label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* Folder delete confirmation modal */
+.ssmf-folder-delete-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100000;
+}
+
+.ssmf-folder-delete-modal.is-open {
+	display: block;
+}
+
+.ssmf-modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.ssmf-modal-content {
+	position: relative;
+	width: 500px;
+	max-width: 90%;
+	margin: 80px auto;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	z-index: 100001;
+}
+
+.ssmf-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 20px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.ssmf-modal-header h2 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.ssmf-modal-close {
+	background: none;
+	border: none;
+	font-size: 24px;
+	line-height: 1;
+	color: #646970;
+	cursor: pointer;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	transition: all 0.15s ease;
+}
+
+.ssmf-modal-close:hover {
+	background: #f0f0f1;
+	color: #1d2327;
+}
+
+.ssmf-modal-body {
+	padding: 20px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: #50575e;
+}
+
+.ssmf-modal-body p {
+	margin: 0 0 12px;
+}
+
+.ssmf-modal-body p:last-child {
+	margin-bottom: 0;
+}
+
+.ssmf-modal-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	padding: 16px 20px;
+	border-top: 1px solid #dcdcde;
+	background: #f6f7f7;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.ssmf-modal-footer .button {
+	margin: 0;
+}
+
+/* Push Cancel button to the far right */
+.ssmf-modal-footer .ssmf-cancel-delete {
+	margin-left: auto;
+}
+
+/* Upload page folder heading */
+.ssmf-upload-folder-heading {
+	margin-bottom: 15px;
+}
+
+.ssmf-upload-folder-heading h3 {
+	margin: 0 0 5px 0;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.ssmf-upload-folder-heading p {
+	margin: 0;
+	font-size: 13px;
+	color: #646970;
+}
+
+/* Upload page info notice */
+.ssmf-upload-info-notice {
+	margin: 20px 0;
+}
+
+/* Upload page CTA box */
+.ssmf-view-folder-cta {
+	margin: 20px 0;
+	padding: 15px;
+	background: #f0f6fc;
+	border-left: 4px solid #2271b1;
+	border-radius: 4px;
+}
+
+.ssmf-view-folder-cta p {
+	margin: 0 0 10px 0;
+	font-weight: 500;
+}
