@@ -2,6 +2,9 @@
 /**
  * Stupid Simple Media Folders
  *
+ * Extracted from HandcraftedDad theme on 2026-02-06.
+ * Originally developed as theme functionality, now a standalone plugin.
+ *
  * @package   Stupid_Simple_Media_Folders
  * @author    Handcrafted Dad
  * @license   GPL-2.0-or-later
