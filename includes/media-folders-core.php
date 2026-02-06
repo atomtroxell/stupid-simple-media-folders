@@ -828,20 +828,44 @@ function ssmf_populate_folders_columns( $content, $column_name, $term_id ) {
 		foreach ( $attachments as $attachment ) {
 			$mime_type = get_post_mime_type( $attachment->ID );
 			if ( strpos( $mime_type, 'image/' ) === 0 ) {
-				$types['image'] = 'Images';
+				$types['image'] = array(
+					'icon'  => 'dashicons-format-image',
+					'label' => __( 'Images', 'stupid-simple-media-folders' ),
+				);
 			} elseif ( strpos( $mime_type, 'video/' ) === 0 ) {
-				$types['video'] = 'Videos';
+				$types['video'] = array(
+					'icon'  => 'dashicons-video-alt3',
+					'label' => __( 'Videos', 'stupid-simple-media-folders' ),
+				);
 			} elseif ( strpos( $mime_type, 'audio/' ) === 0 ) {
-				$types['audio'] = 'Audio';
+				$types['audio'] = array(
+					'icon'  => 'dashicons-media-audio',
+					'label' => __( 'Audio', 'stupid-simple-media-folders' ),
+				);
 			} elseif ( strpos( $mime_type, 'application/pdf' ) === 0 ) {
-				$types['pdf'] = 'PDFs';
+				$types['pdf'] = array(
+					'icon'  => 'dashicons-pdf',
+					'label' => __( 'PDFs', 'stupid-simple-media-folders' ),
+				);
 			} else {
-				$types['other'] = 'Other';
+				$types['other'] = array(
+					'icon'  => 'dashicons-media-default',
+					'label' => __( 'Other', 'stupid-simple-media-folders' ),
+				);
 			}
 		}
 
 		if ( ! empty( $types ) ) {
-			$content = implode( ', ', $types );
+			$icons = array();
+			foreach ( $types as $type_data ) {
+				$icons[] = sprintf(
+					'<span class="ssmf-file-type-icon dashicons %s" title="%s" aria-label="%s"></span>',
+					esc_attr( $type_data['icon'] ),
+					esc_attr( $type_data['label'] ),
+					esc_attr( $type_data['label'] )
+				);
+			}
+			$content = '<span class="ssmf-file-type-icons">' . implode( '', $icons ) . '</span>';
 		} else {
 			$content = '—';
 		}
@@ -962,11 +986,11 @@ function ssmf_enqueue_media_folders_assets( $hook ) {
 		return;
 	}
 
-	// Always enqueue CSS
+	// Always enqueue CSS (with Dashicons dependency for file type icons)
 	wp_enqueue_style(
 		'ssmf-media-folders',
 		SSMF_URL . 'assets/css/media-folders.css',
-		array(),
+		array( 'dashicons' ),
 		'1.0.1'
 	);
 

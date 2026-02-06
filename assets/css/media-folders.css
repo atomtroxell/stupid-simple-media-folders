@@ -611,10 +611,52 @@
 	text-align: center !important;
 }
 
-/* File types column - badge style */
+/* File types column - icon display */
 .taxonomy-folders .column-file_types {
 	font-size: 12px;
 	color: #646970;
+}
+
+.ssmf-file-type-icons {
+	display: inline-flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.ssmf-file-type-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 1;
+	color: #50575e;
+	cursor: help;
+	transition: color 0.15s ease;
+}
+
+.ssmf-file-type-icon:hover {
+	color: #2271b1;
+}
+
+/* Specific icon colors */
+.ssmf-file-type-icon.dashicons-format-image {
+	color: #0073aa; /* Blue for images */
+}
+
+.ssmf-file-type-icon.dashicons-video-alt3 {
+	color: #d63638; /* Red for videos */
+}
+
+.ssmf-file-type-icon.dashicons-media-audio {
+	color: #00a32a; /* Green for audio */
+}
+
+.ssmf-file-type-icon.dashicons-pdf {
+	color: #d63638; /* Red for PDFs */
+}
+
+.ssmf-file-type-icon.dashicons-media-default {
+	color: #646970; /* Gray for other */
 }
 
 /* Description column */
