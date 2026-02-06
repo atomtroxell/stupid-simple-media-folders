@@ -88,9 +88,12 @@ wp taxonomy list --fields=name,label
 - **Delete modal:** Browser alert shows instead of custom modal (JS override incomplete)
 - **Performance:** O(n²) hierarchy detection for large folder trees (500+ folders)
 
+## Recent Enhancements
+
+✅ **File Type Icons** (v1.0.1) - Replaced text with color-coded Dashicons
+
 ## Future Enhancements
 
-- File type icons (currently text-based)
 - Drag-and-drop folder reordering
 - Bulk folder assignment (List view)
 - Folder templates

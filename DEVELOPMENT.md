@@ -406,16 +406,21 @@ error_log( 'SSMF: Folder count updated for term ' . $term_id );
 - Consider increasing interval to 2-3 seconds
 - Or use EventSource/WebSockets for real-time updates
 
+## Recent Enhancements
+
+### Implemented Features (v1.0.1+)
+
+1. **File Type Icons** ✅ (v1.0.1)
+   - Replaced text-based file type display with WordPress Dashicons
+   - Color-coded icons: Blue (images), Red (video/PDF), Green (audio), Gray (other)
+   - Tooltips on hover with accessibility attributes (title, aria-label)
+   - Visual icons in "File Types" column on folder management page
+
 ## Future Enhancements
 
 ### Planned Features
 
-1. **File Type Icons** (referenced in readme.txt)
-   - Replace text-based file type display with actual icons
-   - Use WordPress Dashicons or custom SVG sprite
-   - Show in folder management page "Items" column
-
-2. **Drag-and-Drop Folder Organization**
+1. **Drag-and-Drop Folder Organization**
    - Reorder folders within same level
    - Move folders to different parent
    - Update hierarchy in database
