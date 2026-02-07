@@ -14,7 +14,7 @@
  * Plugin Name:       Stupid Simple Media Folders
  * Plugin URI:        https://handcrafteddad.com/plugins/stupid-simple-media-folders
  * Description:       Organize your WordPress media library with hierarchical folders. Taxonomy-based, lightweight, and zero configuration required.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Handcrafted Dad
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Define plugin constants
 if ( ! defined( 'SSMF_VERSION' ) ) {
-	define( 'SSMF_VERSION', '1.0.0' );
+	define( 'SSMF_VERSION', '1.0.2' );
 }
 
 if ( ! defined( 'SSMF_FILE' ) ) {

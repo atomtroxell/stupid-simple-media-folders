@@ -991,7 +991,7 @@ function ssmf_enqueue_media_folders_assets( $hook ) {
 		'ssmf-media-folders',
 		SSMF_URL . 'assets/css/media-folders.css',
 		array( 'dashicons' ),
-		'1.0.1'
+		SSMF_VERSION
 	);
 
 	// Enqueue JavaScript
@@ -999,7 +999,7 @@ function ssmf_enqueue_media_folders_assets( $hook ) {
 		'ssmf-media-folders',
 		SSMF_URL . 'assets/js/media-folders.js',
 		array( 'jquery' ),
-		'1.0.6',
+		SSMF_VERSION,
 		true
 	);
 
