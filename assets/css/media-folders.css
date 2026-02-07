@@ -362,7 +362,7 @@
 	width: 16px;
 	height: 12px;
 	min-width: 16px; /* Prevent button from shrinking */
-	background-image: url('../images/icon-folder.svg');
+	background-image: url('../images/icon-folder.png');
 	background-size: 32px 24px;
 	background-repeat: no-repeat;
 	background-position: 0 0; /* Default: closed folder (static) */

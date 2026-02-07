@@ -108,7 +108,7 @@ wp taxonomy list --fields=name,label
 | `includes/media-folders-core.php` | 1,247 | All functionality |
 | `assets/js/media-folders.js` | 374 | Frontend interactivity |
 | `assets/css/media-folders.css` | 838 | All styling |
-| `assets/images/icon-folder.svg` | 32 | Icon sprite (4 states) |
+| `assets/images/icon-folder.png` | - | Icon sprite (4 states) |
 
 ## API
 
